@@ -41,9 +41,9 @@ DISEASE_LABELS = [
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Construct full model paths
-HEALTH_MODEL_PATH = os.path.join(BASE_DIR, "model", "mobilenetv2_healthy_best.h5")
-DISEASE_MODEL_PATH = os.path.join(BASE_DIR, "model", "mobilenetv2_soybean_best_old.h5")
-YOLO_PATH = os.path.join(BASE_DIR, "model", "best.pt")
+HEALTH_MODEL_PATH = os.path.join(BASE_DIR,"mobilenetv2_healthy_best.h5")
+DISEASE_MODEL_PATH = os.path.join(BASE_DIR,"mobilenetv2_soybean_best_old.h5")
+YOLO_PATH = os.path.join(BASE_DIR,"best.pt")
 
 # Load models
 leaf_model = torch.hub.load('ultralytics/yolov5', 'custom', path=YOLO_PATH, force_reload=False)
