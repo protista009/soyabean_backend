@@ -1,11 +1,11 @@
-fastapi==0.110.1
-uvicorn==0.29.0
-python-multipart==0.0.9
+fastapi
+uvicorn
+python-multipart
 torch
 
 tensorflow
 
-opencv-python==4.9.0.80
-pillow==9.5.0
-numpy==1.24.3
-pandas==2.2.2
+opencv-python
+pillow
+numpy
+pandas
