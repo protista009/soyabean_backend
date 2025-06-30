@@ -8,12 +8,17 @@ from PIL import Image
 from tensorflow.keras.models import load_model
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 import io
+import platform
 import pathlib
 import uvicorn 
 import os
 
 # Fix for Windows path issues
-pathlib.PosixPath = pathlib.WindowsPath
+
+
+if platform.system() != 'Windows':
+    pathlib.WindowsPath = pathlib.PosixPath
+
 
 app = FastAPI()
 
