@@ -119,12 +119,15 @@ async def predict(file: UploadFile = File(...)):
 # Run with: uvicorn main:app --reload
 
 
+
+
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))
+    port = int(os.environ.get("PORT", 10000))  # Use Render's PORT or default to 10000
     uvicorn.run(
         "main:app",
-        host="0.0.0.0",
+        host="0.0.0.0",  # Critical: Must be 0.0.0.0, not localhost
         port=port,
-        reload=True  # Remove reload=True for production
+        reload=False  # Set to False for production
     )
+
 
